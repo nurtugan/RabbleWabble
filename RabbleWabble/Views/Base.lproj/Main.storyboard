@@ -115,20 +115,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionGroupCell" id="dvO-h2-Ax3" customClass="QuestionGroupCell" customModule="RabbleWabble" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dvO-h2-Ax3" id="XZc-FV-Blt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-UE-ucz">
-                                                    <rect key="frame" x="20" y="11" width="341.66666666666669" height="21"/>
+                                                    <rect key="frame" x="20" y="11.000000000000002" width="341.66666666666669" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3a-1Q-MMS">
-                                                    <rect key="frame" x="369.66666666666669" y="11" width="24.333333333333314" height="21"/>
+                                                    <rect key="frame" x="369.66666666666669" y="11.000000000000002" width="24.333333333333314" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -166,7 +166,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8ZQ-ba-y8m"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Select Question Group" id="teS-RN-bVV"/>
+                    <navigationItem key="navigationItem" title="Select Question Group" id="teS-RN-bVV">
+                        <barButtonItem key="leftBarButtonItem" image="ic_settings" id="Xys-Mz-PXP">
+                            <connections>
+                                <segue destination="QlD-Wk-uE5" kind="show" id="QIi-nO-1OK"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="d1Q-U9-efK" id="Ad3-Lw-x20"/>
                     </connections>
@@ -174,6 +180,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cT-OS-PTz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2084.057971014493" y="48.913043478260875"/>
+        </scene>
+        <!--App Settings-->
+        <scene sceneID="fGs-3E-ztj">
+            <objects>
+                <tableViewController title="App Settings" id="QlD-Wk-uE5" customClass="AppSettingsViewController" customModule="RabbleWabble" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qfl-Jn-rSQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <connections>
+                            <outlet property="dataSource" destination="QlD-Wk-uE5" id="JsY-ik-xr7"/>
+                            <outlet property="delegate" destination="QlD-Wk-uE5" id="aGa-SC-IZX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="sE3-7L-emg"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqL-ci-veY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2084" y="811"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XN6-jG-mUz">
@@ -197,5 +222,6 @@
     <resources>
         <image name="ic_circle_check" width="80" height="80"/>
         <image name="ic_circle_x" width="80" height="80"/>
+        <image name="ic_settings" width="26" height="26"/>
     </resources>
 </document>
