@@ -6,7 +6,7 @@ public class AppSettingsViewController: UITableViewController {
   // MARK: - Properties
   public let appSettings = AppSettings.shared
   private let cellIdentifier = "basicCell"
-
+  
   // MARK: - View Life Cycle
   public override func viewDidLoad() {
     super.viewDidLoad()
@@ -22,13 +22,13 @@ public class AppSettingsViewController: UITableViewController {
 
 // MARK: - UITableViewDataSource
 extension AppSettingsViewController {
-
+  
   public override func tableView(
     _ tableView: UITableView,
     numberOfRowsInSection section: Int) -> Int {
     
-      // 1
-      return QuestionStrategyType.allCases.count
+    // 1
+    return QuestionStrategyType.allCases.count
   }
   
   public override func tableView(
@@ -37,14 +37,14 @@ extension AppSettingsViewController {
     
     let cell = tableView.dequeueReusableCell(
       withIdentifier: cellIdentifier, for: indexPath)
-
+    
     // 2
     let questionStrategyType =
       QuestionStrategyType.allCases[indexPath.row]
-
+    
     // 3
     cell.textLabel?.text = questionStrategyType.title()
-
+    
     // 4
     if appSettings.questionStrategyType ==
       questionStrategyType {
@@ -61,7 +61,7 @@ extension AppSettingsViewController {
   public override func tableView(
     _ tableView: UITableView,
     didSelectRowAt indexPath: IndexPath) {
-
+    
     let questionStrategyType =
       QuestionStrategyType.allCases[indexPath.row]
     appSettings.questionStrategyType = questionStrategyType
