@@ -102,6 +102,14 @@
             </objects>
             <point key="canvasLocation" x="2914" y="49"/>
         </scene>
+        <!--NewQuestionGroup-->
+        <scene sceneID="OiF-zV-8qZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="NewQuestionGroup" id="LKn-ml-opV" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P3h-sw-AJP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2155" y="-338"/>
+        </scene>
         <!--Select Question Group-->
         <scene sceneID="CkN-02-tBr">
             <objects>
@@ -115,20 +123,20 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="QuestionGroupCell" id="dvO-h2-Ax3" customClass="QuestionGroupCell" customModule="RabbleWabble" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dvO-h2-Ax3" id="XZc-FV-Blt">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5JP-UE-ucz">
-                                                    <rect key="frame" x="20" y="11.000000000000002" width="341.66666666666669" height="21.666666666666671"/>
+                                                    <rect key="frame" x="20" y="10.999999999999998" width="341.66666666666669" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="750" verticalHuggingPriority="251" text="0%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3a-1Q-MMS">
-                                                    <rect key="frame" x="369.66666666666669" y="11.000000000000002" width="24.333333333333314" height="21.666666666666671"/>
+                                                    <rect key="frame" x="369.66666666666669" y="10.999999999999998" width="24.333333333333314" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -170,6 +178,11 @@
                         <barButtonItem key="leftBarButtonItem" image="ic_settings" id="Xys-Mz-PXP">
                             <connections>
                                 <segue destination="QlD-Wk-uE5" kind="show" id="QIi-nO-1OK"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rJ5-ff-ZcN">
+                            <connections>
+                                <segue destination="LKn-ml-opV" kind="presentation" id="KLh-Ya-wF3"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
