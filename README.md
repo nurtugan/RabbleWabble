@@ -13,4 +13,4 @@ Fundamental Design Patterns by Tutorials. Learning design patterns in Swift
 
 ![Alt text][id]
 
-[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat" =200x200
