@@ -11,4 +11,4 @@ Fundamental Design Patterns by Tutorials. Learning design patterns in Swift
 6. Observer Pattern
 7. Builder Pattern
 
-<img src="https://octodex.github.com/images/dojocat.jpg" alt="The Dojocat" width="200" height="200">
+<img src="https://octodex.github.com/images/dojocat.jpg" alt="The Dojocat" width="186" height="186">
